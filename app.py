@@ -15,7 +15,7 @@ def login():
 	
 	try:
 	
-		x = request.json
+		x = request.json()
 		return jsonify(x)
 		
 	except Exception as e:
