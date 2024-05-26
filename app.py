@@ -13,8 +13,13 @@ def index():
 
 def login():
 	
-	x = request.json()
-	return jsonify(x)
+	try:
+	
+		x = request.json()
+		return jsonify(x)
+		
+	except Exception as e:
+		return jsonify({"Error": "%s"%e})
 	
 	
 #app.run()
