@@ -17,6 +17,7 @@ def login():
 	
 		x = request.json
 		x["happy"] = "Iron man"
+		x["is_json"] = request.is_json
 		return jsonify(x)
 		
 	except Exception as e:
